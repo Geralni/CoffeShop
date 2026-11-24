@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Administración · Café Bella Durmiente</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E☕%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+
+  <!-- Login -->
+  <section class="login" id="vistaLogin" hidden>
+    <form class="login-card" id="formLogin">
+      <div class="login-logo">☕</div>
+      <h1>Bella Durmiente</h1>
+      <p>Panel de administración · Tingo María</p>
+      <label>Usuario<input name="usuario" autocomplete="username" required></label>
+      <label>Contraseña<input name="clave" type="password" autocomplete="current-password" required></label>
+      <button class="btn btn-oro" type="submit">Ingresar</button>
+      <a href="/">← Volver a la tienda</a>
+    </form>
+  </section>
+
+  <!-- Panel -->
+  <div class="panel" id="vistaPanel" hidden>
+    <aside class="lateral" id="lateral">
+      <div class="lateral-logo">☕ <span><b>Bella Durmiente</b><small>Administración</small></span></div>
+      <nav>
+        <button data-tab="resumen" class="activo">📊 Resumen</button>
+        <button data-tab="productos">☕ Productos</button>
+        <button data-tab="resenas">⭐ Reseñas <span class="badge" id="badgeResenas"></span></button>
+        <button data-tab="pedidos">🧾 Pedidos <span class="badge" id="badgePedidos"></span></button>
+        <button data-tab="promociones">🎄 Promociones</button>
+        <button data-tab="catalogos">🗂️ Catálogos</button>
+        <button data-tab="cuenta">🔐 Mi cuenta</button>
+      </nav>
+      <div class="lateral-pie">
+        <a href="/" target="_blank">🛍️ Ver tienda</a>
+        <button id="salir">↩ Cerrar sesión</button>
+      </div>
+    </aside>
+    <main class="contenido">
+      <header class="barra">
+        <button class="menu-movil" id="menuMovil" aria-label="Menú">☰</button>
+        <h1 id="tituloTab">Resumen</h1>
+        <span class="usuario" id="usuarioActual"></span>
+      </header>
+      <div id="vista"></div>
+    </main>
+  </div>
+
+  <dialog class="modal" id="modal">
+    <button class="modal-cerrar" data-cerrar aria-label="Cerrar">✕</button>
+    <div id="modalCuerpo"></div>
+  </dialog>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="/js/comun.js"></script>
+  <script src="/js/admin.js"></script>
+</body>
+</html>

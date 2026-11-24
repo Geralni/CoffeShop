@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Café Bella Durmiente · Tingo María</title>
+  <meta name="description" content="Café de altura de Tingo María, Huánuco. Café de especialidad, derivados de café y panetones navideños.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E☕%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+  <!-- Cinta navideña -->
+  <div class="cinta-navidad">
+    <span>🎄 <b id="cintaTexto">Campaña Navideña</b> — panetones artesanales con descuento</span>
+    <span class="cinta-dias" id="cintaDias"></span>
+    <a href="#navidad">Ver panetones →</a>
+  </div>
+
+  <!-- Navegación -->
+  <header class="nav" id="nav">
+    <a class="logo" href="#inicio" aria-label="Inicio">
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <circle cx="24" cy="24" r="23" fill="#0f3d2e"/>
+        <path d="M4 32 C10 30 13 27 16 24 L18 21 L20 24 C24 26 27 19 31 18 C35 17 38 23 44 26 L44 34 Q24 46 4 34Z" fill="#1d6b4f"/>
+        <ellipse cx="24" cy="18" rx="6" ry="8.5" fill="#e0a526" transform="rotate(30 24 18)"/>
+        <path d="M21 12 q6 6 0 12" stroke="#0f3d2e" stroke-width="1.8" fill="none" transform="rotate(30 24 18)"/>
+      </svg>
+      <span><b>Bella Durmiente</b><small>Café de Tingo María</small></span>
+    </a>
+    <nav class="menu" id="menu">
+      <a href="#cafe">Nuestro café</a>
+      <a href="#tingo">Tingo María</a>
+      <a href="#navidad" class="menu-navidad">🎄 Navidad</a>
+      <a href="#tienda">Tienda</a>
+    </nav>
+    <button class="btn-carrito" id="abrirCarrito" aria-label="Abrir carrito">
+      🛒 <span class="contador" id="contadorCarrito">0</span>
+    </button>
+    <button class="hamburguesa" id="hamburguesa" aria-label="Menú">☰</button>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="inicio">
+    <div class="hero-contenido">
+      <p class="eyebrow">Tingo María · Huánuco · Perú</p>
+      <h1>El café que nace a los pies de la <em>Bella Durmiente</em></h1>
+      <p class="hero-texto">Granos de altura cultivados por familias de Leoncio Prado y tostados aquí, en la Puerta de la Amazonía.</p>
+      <div class="hero-botones">
+        <a class="btn btn-oro" href="#tienda">Comprar café</a>
+        <a class="btn btn-rojo" href="#navidad">🎄 Panetones navideños</a>
+      </div>
+      <ul class="hero-datos">
+        <li><b>1 000–1 800</b><span>m s. n. m.</span></li>
+        <li><b>100%</b><span>arábica</span></li>
+        <li><b>Huánuco</b><span>de origen</span></li>
+      </ul>
+    </div>
+
+    <!-- Fondo: fotos de Tingo María que cambian cada 3 segundos -->
+    <div class="hero-fondo" id="heroFondo" aria-hidden="true">
+      <div class="slide activo" data-lugar="Tingo María y la Bella Durmiente" style="background-image:url('/img/hero/tingo-maria.jpg')"></div>
+      <div class="slide" data-lugar="Cueva de las Lechuzas" style="background-image:url('/img/hero/cueva-lechuzas.jpg')"></div>
+      <div class="slide" data-lugar="Valle del río Huallaga" style="background-image:url('/img/hero/rio-huallaga.jpg')"></div>
+      <div class="slide" data-lugar="Cosecha de café de altura" style="background-image:url('/img/hero/cosecha-cafe.jpg')"></div>
+      <div class="slide" data-lugar="Cerezas maduras, recogidas a mano" style="background-image:url('/img/hero/cafetal.jpg')"></div>
+    </div>
+
+    <div class="hero-pie">
+      <span class="hero-lugar" id="heroLugar">📍 Tingo María y la Bella Durmiente</span>
+      <div class="hero-puntos" id="heroPuntos" role="tablist" aria-label="Fotos de portada"></div>
+    </div>
+
+    <svg class="ola" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 60 V30 C240 10 480 45 720 28 C960 10 1200 42 1440 24 V60Z" fill="var(--crema)"/>
+    </svg>
+  </section>
+
+  <!-- Nuestro café -->
+  <section class="seccion" id="cafe">
+    <div class="contenedor">
+      <div class="titulo-seccion">
+        <p class="eyebrow">Nuestro café</p>
+        <h2>Del cafetal tingalés a tu taza</h2>
+      </div>
+      <div class="grid-info">
+        <article class="info">
+          <div class="info-icono">⛰️</div>
+          <h3>Café de altura</h3>
+          <p>Crece entre 1 000 y 1 800 m s. n. m. en los valles que rodean Tingo María. La neblina y el clima húmedo dan granos densos y dulces.</p>
+        </article>
+        <article class="info">
+          <div class="info-icono">🍒</div>
+          <h3>Cosecha a mano</h3>
+          <p>Las familias productoras recogen solo las cerezas maduras. Variedades Typica, Caturra, Bourbon y Geisha.</p>
+        </article>
+        <article class="info">
+          <div class="info-icono">🔥</div>
+          <h3>Tostado en Tingo</h3>
+          <p>Tostamos en pequeños lotes en la ciudad para que el café llegue fresco y con todo su aroma a tu casa.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tingo María -->
+  <section class="seccion seccion-tingo" id="tingo">
+    <div class="contenedor">
+      <div class="titulo-seccion claro">
+        <p class="eyebrow">Conoce Tingo María</p>
+        <h2>La Puerta de la Amazonía</h2>
+        <p>Capital de la provincia de Leoncio Prado, Huánuco. Ciudad cálida y verde a unos 650 m s. n. m., junto al río Huallaga.</p>
+      </div>
+      <div class="grid-tingo">
+        <article class="tingo-card">
+          <span>🌄</span>
+          <h3>La Bella Durmiente</h3>
+          <p>Montañas cuya silueta parece una mujer dormida. Es el símbolo de la ciudad y el nombre de nuestro café.</p>
+        </article>
+        <article class="tingo-card">
+          <span>🦉</span>
+          <h3>Cueva de las Lechuzas</h3>
+          <p>En el Parque Nacional Tingo María (creado en 1965), hogar de los guácharos, aves nocturnas únicas.</p>
+        </article>
+        <article class="tingo-card">
+          <span>🌊</span>
+          <h3>Río Huallaga</h3>
+          <p>Atraviesa la ciudad y alimenta los valles donde crecen el café y el cacao de la región.</p>
+        </article>
+        <article class="tingo-card">
+          <span>🌿</span>
+          <h3>Selva alta</h3>
+          <p>Cataratas, cuevas y bosque nublado. El mismo clima que hace especial a nuestro café.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Navidad -->
+  <section class="navidad" id="navidad">
+    <div class="copos" aria-hidden="true"></div>
+    <div class="contenedor">
+      <div class="navidad-cabecera">
+        <div>
+          <p class="eyebrow">Campaña Navideña 2026</p>
+          <h2>Panetones con alma cafetalera</h2>
+          <p>Horneados en Tingo María con masa madre, café de altura y cacao amazónico. <b id="navidadDescuento"></b></p>
+        </div>
+        <div class="cuenta-regresiva" id="cuentaRegresiva" aria-label="Cuenta regresiva a Navidad">
+          <div><b data-u="d">--</b><span>días</span></div>
+          <div><b data-u="h">--</b><span>horas</span></div>
+          <div><b data-u="m">--</b><span>min</span></div>
+          <div><b data-u="s">--</b><span>seg</span></div>
+        </div>
+      </div>
+      <div class="grid-productos" id="gridNavidad"></div>
+    </div>
+  </section>
+
+  <!-- Tienda -->
+  <section class="seccion" id="tienda">
+    <div class="contenedor">
+      <div class="titulo-seccion">
+        <p class="eyebrow">Tienda</p>
+        <h2>Productos de café tingalés</h2>
+      </div>
+      <div class="filtros">
+        <div class="chips" id="chipsCategorias"></div>
+        <input type="search" id="buscador" placeholder="🔍 Buscar café, panetón, licor...">
+      </div>
+      <div class="grid-productos" id="gridProductos">
+        <p class="cargando">Cargando productos…</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="pie">
+    <div class="contenedor pie-grid">
+      <div>
+        <h3>☕ Café Bella Durmiente</h3>
+        <p>Café de especialidad y panetones artesanales de Tingo María, Leoncio Prado, Huánuco – Perú.</p>
+      </div>
+      <div>
+        <h4>Delivery</h4>
+        <p>Tingo María, Castillo Grande, Afilador y alrededores. Envíos a todo Huánuco.</p>
+      </div>
+      <div>
+        <h4>Enlaces</h4>
+        <p><a href="#tienda">Tienda</a> · <a href="#navidad">Navidad</a> · <a href="/admin">Administración</a></p>
+      </div>
+    </div>
+    <p class="pie-copy">Hecho con ☕ en la ciudad de la Bella Durmiente · 2026</p>
+  </footer>
+
+  <!-- Modal de producto -->
+  <dialog class="modal" id="modalProducto">
+    <button class="modal-cerrar" data-cerrar aria-label="Cerrar">✕</button>
+    <div id="modalContenido"></div>
+  </dialog>
+
+  <!-- Carrito -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="carrito" id="carrito" aria-label="Carrito de compras">
+    <div class="carrito-cabecera">
+      <h3>Tu carrito</h3>
+      <button class="modal-cerrar estatico" id="cerrarCarrito" aria-label="Cerrar">✕</button>
+    </div>
+    <div class="carrito-items" id="carritoItems"></div>
+    <div class="carrito-pie" id="carritoPie">
+      <div class="carrito-total"><span>Total</span><b id="carritoTotal">S/ 0.00</b></div>
+      <form id="formPedido" class="form">
+        <h4>Datos de entrega</h4>
+        <input name="nombre" placeholder="Nombre completo" required maxlength="100">
+        <input name="email" type="email" placeholder="Correo electrónico" required maxlength="120">
+        <input name="telefono" placeholder="Celular (ej. 962 123 456)" required maxlength="20">
+        <input name="direccion" placeholder="Dirección en Tingo María" required maxlength="200">
+        <textarea name="nota" placeholder="Nota (opcional): referencia, hora de entrega…" maxlength="300" rows="2"></textarea>
+        <button class="btn btn-oro btn-bloque" type="submit">Confirmar pedido</button>
+        <small>Pago contra entrega en efectivo o Yape/Plin. Te contactaremos para coordinar.</small>
+      </form>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="/js/comun.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>

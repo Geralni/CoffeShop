@@ -1,0 +1,19 @@
+{
+  "name": "cafe-bella-durmiente",
+  "version": "1.0.0",
+  "description": "Tienda web de productos de café de Tingo María, Huánuco - Perú",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "reset-db": "node db/reset.js"
+  },
+  "engines": {
+    "node": ">=22.13"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "express-session": "^1.18.1",
+    "multer": "^2.0.2"
+  }
+}

@@ -1,0 +1,20 @@
+# Dependencias (se reinstalan con "npm install")
+node_modules/
+
+# Base de datos local (se crea sola al ejecutar "npm start")
+data/
+*.db
+*.db-wal
+*.db-shm
+
+# Imágenes subidas desde el panel de administración
+uploads/*
+!uploads/.gitkeep
+
+# Sistema y editores
+.env
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+*.log
